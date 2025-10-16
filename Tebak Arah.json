@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 242,
+    "build": 243,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -536,6 +536,78 @@
         "name": "18.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "21.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "21.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "22.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "22.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "23.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "23.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite7.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite7",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Pause_Panel.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Pause_Panel.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Home.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Home.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Resume.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Resume.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Restart.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Restart.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Win_Panel.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Win_Panel.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -705,7 +777,8 @@
         "gridAlpha": 0.8,
         "snap": false,
         "zoomFactor": 0.4335774304702403,
-        "windowMask": false
+        "windowMask": false,
+        "selectedLayer": ""
       },
       "objectsGroups": [
         {
@@ -2248,8 +2321,8 @@
                     "Tween",
                     "\"Go Down\"",
                     "Settings_Parts.Y() + 812.5",
-                    "\"easeOutQuint\"",
-                    "2",
+                    "\"easeInQuint\"",
+                    "1.5",
                     ""
                   ]
                 },
@@ -2675,7 +2748,8 @@
         "gridAlpha": 0.8,
         "snap": false,
         "zoomFactor": 0.546875,
-        "windowMask": false
+        "windowMask": false,
+        "selectedLayer": ""
       },
       "objectsGroups": [],
       "variables": [
@@ -3293,11 +3367,209 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.44819780454103647,
-        "windowMask": false
+        "zoomFactor": 0.3437520241612352,
+        "windowMask": false,
+        "selectedLayer": "Blur"
       },
-      "objectsGroups": [],
-      "variables": [],
+      "objectsGroups": [
+        {
+          "name": "Pause_Parts",
+          "objects": [
+            {
+              "name": "Restart"
+            },
+            {
+              "name": "Resume"
+            },
+            {
+              "name": "Home"
+            },
+            {
+              "name": "VolumeSlider"
+            },
+            {
+              "name": "MusicSlider"
+            },
+            {
+              "name": "Pause_panel"
+            }
+          ]
+        },
+        {
+          "name": "Win_Parts",
+          "objects": [
+            {
+              "name": "Restart_Win"
+            },
+            {
+              "name": "Home_Win"
+            },
+            {
+              "name": "Final_Fish"
+            },
+            {
+              "name": "Final_Timer"
+            },
+            {
+              "name": "Win_Panel"
+            }
+          ]
+        }
+      ],
+      "variables": [
+        {
+          "name": "TimerLeft",
+          "type": "number",
+          "value": 60
+        },
+        {
+          "name": "HeartLeft",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "TotalTime",
+          "type": "number",
+          "value": 60
+        },
+        {
+          "name": "TotalQuestion",
+          "type": "number",
+          "value": 20
+        },
+        {
+          "name": "QuestionIndex",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "folded": true,
+          "name": "Directions",
+          "type": "structure",
+          "children": [
+            {
+              "name": "Q1",
+              "type": "string",
+              "value": "Left"
+            },
+            {
+              "name": "Q10",
+              "type": "string",
+              "value": "Right"
+            },
+            {
+              "name": "Q11",
+              "type": "string",
+              "value": "Left"
+            },
+            {
+              "name": "Q12",
+              "type": "string",
+              "value": "Right"
+            },
+            {
+              "name": "Q13",
+              "type": "string",
+              "value": "Right"
+            },
+            {
+              "name": "Q14",
+              "type": "string",
+              "value": "Left"
+            },
+            {
+              "name": "Q15",
+              "type": "string",
+              "value": "Right"
+            },
+            {
+              "name": "Q16",
+              "type": "string",
+              "value": "Left"
+            },
+            {
+              "name": "Q17",
+              "type": "string",
+              "value": "Left"
+            },
+            {
+              "name": "Q18",
+              "type": "string",
+              "value": "Right"
+            },
+            {
+              "name": "Q19",
+              "type": "string",
+              "value": "Right"
+            },
+            {
+              "name": "Q2",
+              "type": "string",
+              "value": "Right"
+            },
+            {
+              "name": "Q20",
+              "type": "string",
+              "value": "Right"
+            },
+            {
+              "name": "Q3",
+              "type": "string",
+              "value": "Left"
+            },
+            {
+              "name": "Q4",
+              "type": "string",
+              "value": "Left"
+            },
+            {
+              "name": "Q5",
+              "type": "string",
+              "value": "Right"
+            },
+            {
+              "name": "Q6",
+              "type": "string",
+              "value": "Left"
+            },
+            {
+              "name": "Q7",
+              "type": "string",
+              "value": "Right"
+            },
+            {
+              "name": "Q8",
+              "type": "string",
+              "value": "Left"
+            },
+            {
+              "name": "Q9",
+              "type": "string",
+              "value": "Left"
+            }
+          ]
+        },
+        {
+          "name": "Correct_FX",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Wrong__FX",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Fish_Collectedd",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Win",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "instances": [
         {
           "angle": 0,
@@ -3413,7 +3685,7 @@
           "name": "Fish_Logo",
           "persistentUuid": "d3d9858e-4d14-4d61-a82a-5b49067a4f06",
           "width": 0,
-          "x": 252,
+          "x": 220,
           "y": 50,
           "zOrder": 7,
           "numberProperties": [],
@@ -3445,7 +3717,7 @@
           "name": "HeartsLogo",
           "persistentUuid": "2d7d45c4-cd6e-4425-906a-5644a6f98a18",
           "width": 0,
-          "x": 597,
+          "x": 565,
           "y": 50,
           "zOrder": 9,
           "numberProperties": [],
@@ -3477,7 +3749,7 @@
           "name": "Timer",
           "persistentUuid": "9a04b498-af2a-4636-b41e-ca256e6b5f58",
           "width": 0,
-          "x": 942,
+          "x": 900,
           "y": 50,
           "zOrder": 11,
           "numberProperties": [],
@@ -3493,7 +3765,7 @@
           "name": "Fish_Collected",
           "persistentUuid": "b991931a-9c72-4ec5-9471-cf0cfc38e1e9",
           "width": 0,
-          "x": 366,
+          "x": 352,
           "y": 74,
           "zOrder": 12,
           "numberProperties": [],
@@ -3509,7 +3781,7 @@
           "name": "Heart_Counter",
           "persistentUuid": "bed19184-3e8d-4a00-98f6-ac4282ad1d15",
           "width": 0,
-          "x": 716,
+          "x": 700,
           "y": 74,
           "zOrder": 13,
           "numberProperties": [],
@@ -3525,7 +3797,7 @@
           "name": "Timer_Counter",
           "persistentUuid": "4f0b8170-14de-4ad6-a91e-c0323f8c203f",
           "width": 0,
-          "x": 1068,
+          "x": 1043,
           "y": 74,
           "zOrder": 14,
           "numberProperties": [],
@@ -3577,6 +3849,198 @@
           "x": 813.5,
           "y": 638,
           "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "Pause_panel",
+          "persistentUuid": "3cda5a2d-7585-4cda-9cab-a99761de8853",
+          "width": 0,
+          "x": 279.5,
+          "y": -607,
+          "zOrder": 18,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "MusicSlider",
+          "persistentUuid": "61abbbc7-15e7-4257-ba56-98d7477dad70",
+          "width": 0,
+          "x": 508,
+          "y": -386,
+          "zOrder": 19,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "VolumeSlider",
+          "persistentUuid": "fac8f6cf-f217-4bdb-abba-2c29bb23ed60",
+          "width": 0,
+          "x": 508,
+          "y": -294,
+          "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "Home",
+          "persistentUuid": "1407f806-c076-46a4-87fb-559f1c8a9a1f",
+          "width": 0,
+          "x": 420,
+          "y": -123,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "Resume",
+          "persistentUuid": "c15d4738-b7ed-41e9-af37-7ad5a4299560",
+          "width": 0,
+          "x": 640,
+          "y": -123,
+          "zOrder": 22,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "Restart",
+          "persistentUuid": "a70e0f31-fae5-465a-8265-526de0f024d7",
+          "width": 0,
+          "x": 860,
+          "y": -123,
+          "zOrder": 23,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "Win_Panel",
+          "persistentUuid": "61a80ae0-ad74-4094-b0c3-d34693344d54",
+          "width": 0,
+          "x": 640,
+          "y": 1074,
+          "zOrder": 24,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "Final_Fish",
+          "persistentUuid": "13dbec8f-9cd8-42cd-81a8-b74ba9b581cc",
+          "width": 0,
+          "x": 657,
+          "y": 1053,
+          "zOrder": 25,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "Final_Timer",
+          "persistentUuid": "0b7b44df-e74c-45ec-aab7-5758e6e2090e",
+          "width": 0,
+          "x": 664,
+          "y": 1164,
+          "zOrder": 26,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "Restart_Win",
+          "persistentUuid": "7be5bcc2-c0d8-4658-9af1-5b66b7fbc6e9",
+          "width": 0,
+          "x": 740,
+          "y": 1270,
+          "zOrder": 27,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "Home_Win",
+          "persistentUuid": "b187dc53-4d3d-40e1-b64e-58dfc329199e",
+          "width": 0,
+          "x": 540,
+          "y": 1270,
+          "zOrder": 28,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "Congratulations_Txt",
+          "persistentUuid": "d0add02c-c31d-42d3-a66b-c7e5245482b9",
+          "width": 0,
+          "x": -500,
+          "y": 360,
+          "zOrder": 29,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3832,7 +4296,37 @@
           "updateIfNotVisible": false,
           "variables": [],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            },
+            {
+              "name": "ButtonScaleTween",
+              "type": "ButtonStates::ButtonScaleTween",
+              "Scale": "Scale",
+              "ButtonFSM": "ButtonFSM",
+              "Tween": "Tween",
+              "IdleScale": 1,
+              "FocusedScale": 1.05,
+              "FadeInDuration": 0.2,
+              "FadeOutDuration": 0.2,
+              "PressedScale": 1,
+              "FadeInEasing": "easeInOutQuad",
+              "FadeOutEasing": "easeInOutQuad",
+              "PreviousState": "Idle"
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
           "animations": [
             {
               "name": "",
@@ -3904,7 +4398,12 @@
               "booleanParameters": {}
             }
           ],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
           "content": {
             "ShowLabelAtChanges": false,
             "InitialValue": 0,
@@ -3919,7 +4418,12 @@
           "updateIfNotVisible": false,
           "variables": [],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
           "animations": [
             {
               "name": "",
@@ -4021,8 +4525,8 @@
           "behaviors": [],
           "content": {
             "ShowLabelAtChanges": false,
-            "InitialValue": 60,
-            "MaxValue": 60
+            "InitialValue": 100,
+            "MaxValue": 100
           }
         },
         {
@@ -4033,7 +4537,12 @@
           "updateIfNotVisible": false,
           "variables": [],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
           "animations": [
             {
               "name": "",
@@ -4155,7 +4664,12 @@
           "underlined": false,
           "variables": [],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
           "string": "0/20",
           "font": "ComicJungle-j9R3v.ttf",
           "textAlignment": "left",
@@ -4198,7 +4712,12 @@
           "underlined": false,
           "variables": [],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
           "string": "3/3",
           "font": "ComicJungle-j9R3v.ttf",
           "textAlignment": "left",
@@ -4241,7 +4760,12 @@
           "underlined": false,
           "variables": [],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
           "string": "1:00",
           "font": "ComicJungle-j9R3v.ttf",
           "textAlignment": "left",
@@ -4726,12 +5250,12 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "10.png",
+                      "image": "15.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 284,
-                        "y": 121.5
+                        "x": 289,
+                        "y": 200
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -4774,12 +5298,12 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "15.png",
+                      "image": "10.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 289,
-                        "y": 200
+                        "x": 284,
+                        "y": 121.5
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -4918,7 +5442,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "14.png",
+                      "image": "21.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -5014,12 +5538,12 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "16.png",
+                      "image": "22.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 289,
-                        "y": 200
+                        "x": 412.5,
+                        "y": 200.5
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -5062,7 +5586,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "17.png",
+                      "image": "23.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -5206,12 +5730,12 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "20.png",
+                      "image": "16.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 412.5,
-                        "y": 200.5
+                        "x": 289,
+                        "y": 200
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -5425,11 +5949,908 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Pause_panel",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Pause_Panel.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 721,
+                            "y": 0
+                          },
+                          {
+                            "x": 721,
+                            "y": 561
+                          },
+                          {
+                            "x": 0,
+                            "y": 561
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "MusicSlider",
+          "type": "PanelSpriteSlider::PanelSpriteSlider",
+          "variant": "Custom dek",
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "content": {
+            "ShowLabelAtChanges": false
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "VolumeSlider",
+          "type": "PanelSpriteSlider::PanelSpriteSlider",
+          "variant": "Custom dek",
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "content": {
+            "ShowLabelAtChanges": false
+          }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Home",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            },
+            {
+              "name": "ButtonScaleTween",
+              "type": "ButtonStates::ButtonScaleTween",
+              "Scale": "Scale",
+              "ButtonFSM": "ButtonFSM",
+              "Tween": "Tween",
+              "IdleScale": 1,
+              "FocusedScale": 1.05,
+              "FadeInDuration": 0.2,
+              "FadeOutDuration": 0.2,
+              "PressedScale": 1,
+              "FadeInEasing": "easeInOutQuad",
+              "FadeOutEasing": "easeInOutQuad",
+              "PreviousState": "Idle"
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Home.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 46,
+                        "y": 45.5
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 91,
+                            "y": 0
+                          },
+                          {
+                            "x": 91,
+                            "y": 91
+                          },
+                          {
+                            "x": 0,
+                            "y": 91
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Resume",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            },
+            {
+              "name": "ButtonScaleTween",
+              "type": "ButtonStates::ButtonScaleTween",
+              "Scale": "Scale",
+              "ButtonFSM": "ButtonFSM",
+              "Tween": "Tween",
+              "IdleScale": 1,
+              "FocusedScale": 1.05,
+              "FadeInDuration": 0.2,
+              "FadeOutDuration": 0.2,
+              "PressedScale": 1,
+              "FadeInEasing": "easeInOutQuad",
+              "FadeOutEasing": "easeInOutQuad",
+              "PreviousState": "Idle"
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Resume.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 152.5,
+                        "y": 48
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 0
+                          },
+                          {
+                            "x": 304,
+                            "y": 0
+                          },
+                          {
+                            "x": 304,
+                            "y": 94
+                          },
+                          {
+                            "x": 1,
+                            "y": 94
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Restart",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            },
+            {
+              "name": "ButtonScaleTween",
+              "type": "ButtonStates::ButtonScaleTween",
+              "Scale": "Scale",
+              "ButtonFSM": "ButtonFSM",
+              "Tween": "Tween",
+              "IdleScale": 1,
+              "FocusedScale": 1.05,
+              "FadeInDuration": 0.2,
+              "FadeOutDuration": 0.2,
+              "PressedScale": 1,
+              "FadeInEasing": "easeInOutQuad",
+              "FadeOutEasing": "easeInOutQuad",
+              "PreviousState": "Idle"
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Restart.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 46,
+                        "y": 45.5
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 92,
+                            "y": 0
+                          },
+                          {
+                            "x": 92,
+                            "y": 91
+                          },
+                          {
+                            "x": 0,
+                            "y": 91
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "FloatingText_Correct",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "string": "",
+          "font": "ComicJungle-j9R3v.ttf",
+          "textAlignment": "center",
+          "characterSize": 29,
+          "color": {
+            "b": 102,
+            "g": 255,
+            "r": 0
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "0;0;0",
+            "outlineThickness": 5,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "",
+            "font": "ComicJungle-j9R3v.ttf",
+            "textAlignment": "center",
+            "verticalTextAlignment": "center",
+            "characterSize": 29,
+            "lineHeight": 0,
+            "color": "0;255;102"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "FloatingText_Wrong",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "string": "Text",
+          "font": "ComicJungle-j9R3v.ttf",
+          "textAlignment": "center",
+          "characterSize": 29,
+          "color": {
+            "b": 27,
+            "g": 2,
+            "r": 208
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "3;0;0",
+            "outlineThickness": 5,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Text",
+            "font": "ComicJungle-j9R3v.ttf",
+            "textAlignment": "center",
+            "verticalTextAlignment": "center",
+            "characterSize": 29,
+            "lineHeight": 0,
+            "color": "208;2;27"
+          }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Win_Panel",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Win_Panel.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 360.5,
+                        "y": 280.5
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 721,
+                            "y": 0
+                          },
+                          {
+                            "x": 721,
+                            "y": 561
+                          },
+                          {
+                            "x": 0,
+                            "y": 561
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Congratulations_Txt",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "string": "SELAMAT!!",
+          "font": "ComicJungle-j9R3v.ttf",
+          "textAlignment": "center",
+          "characterSize": 100,
+          "color": {
+            "b": 42,
+            "g": 195,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "12;65;27",
+            "outlineThickness": 10,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "SELAMAT!!",
+            "font": "ComicJungle-j9R3v.ttf",
+            "textAlignment": "center",
+            "verticalTextAlignment": "center",
+            "characterSize": 100,
+            "lineHeight": 0,
+            "color": "255;195;42"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Final_Fish",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "string": "0/20",
+          "font": "ComicJungle-j9R3v.ttf",
+          "textAlignment": "center",
+          "characterSize": 50,
+          "color": {
+            "b": 42,
+            "g": 195,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "12;65;27",
+            "outlineThickness": 6,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "0/20",
+            "font": "ComicJungle-j9R3v.ttf",
+            "textAlignment": "center",
+            "verticalTextAlignment": "center",
+            "characterSize": 50,
+            "lineHeight": 0,
+            "color": "255;195;42"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Final_Timer",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "string": "1:00",
+          "font": "ComicJungle-j9R3v.ttf",
+          "textAlignment": "center",
+          "characterSize": 50,
+          "color": {
+            "b": 42,
+            "g": 195,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "12;65;27",
+            "outlineThickness": 6,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "1:00",
+            "font": "ComicJungle-j9R3v.ttf",
+            "textAlignment": "center",
+            "verticalTextAlignment": "center",
+            "characterSize": 50,
+            "lineHeight": 0,
+            "color": "255;195;42"
+          }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Restart_Win",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            },
+            {
+              "name": "ButtonScaleTween",
+              "type": "ButtonStates::ButtonScaleTween",
+              "Scale": "Scale",
+              "ButtonFSM": "ButtonFSM",
+              "Tween": "Tween",
+              "IdleScale": 1,
+              "FocusedScale": 1.05,
+              "FadeInDuration": 0.2,
+              "FadeOutDuration": 0.2,
+              "PressedScale": 1,
+              "FadeInEasing": "easeInOutQuad",
+              "FadeOutEasing": "easeInOutQuad",
+              "PreviousState": "Idle"
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "default",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Restart.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 46,
+                        "y": 45.5
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 92,
+                            "y": 0
+                          },
+                          {
+                            "x": 92,
+                            "y": 91
+                          },
+                          {
+                            "x": 0,
+                            "y": 91
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Home_Win",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            },
+            {
+              "name": "ButtonScaleTween",
+              "type": "ButtonStates::ButtonScaleTween",
+              "Scale": "Scale",
+              "ButtonFSM": "ButtonFSM",
+              "Tween": "Tween",
+              "IdleScale": 1,
+              "FocusedScale": 1.05,
+              "FadeInDuration": 0.2,
+              "FadeOutDuration": 0.2,
+              "PressedScale": 1,
+              "FadeInEasing": "easeInOutQuad",
+              "FadeOutEasing": "easeInOutQuad",
+              "PreviousState": "Idle"
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "default",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Home.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 46,
+                        "y": 45.5
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 91,
+                            "y": 0
+                          },
+                          {
+                            "x": 91,
+                            "y": 91
+                          },
+                          {
+                            "x": 0,
+                            "y": 91
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
         "folderName": "__ROOT",
         "children": [
+          {
+            "folderName": "Win",
+            "children": [
+              {
+                "objectName": "Restart_Win"
+              },
+              {
+                "objectName": "Home_Win"
+              },
+              {
+                "objectName": "Final_Timer"
+              },
+              {
+                "objectName": "Final_Fish"
+              },
+              {
+                "objectName": "Win_Panel"
+              }
+            ]
+          },
+          {
+            "folderName": "Pause",
+            "children": [
+              {
+                "objectName": "Pause_panel"
+              },
+              {
+                "objectName": "Restart"
+              },
+              {
+                "objectName": "Home"
+              },
+              {
+                "objectName": "Resume"
+              },
+              {
+                "objectName": "VolumeSlider"
+              },
+              {
+                "objectName": "MusicSlider"
+              }
+            ]
+          },
           {
             "folderName": "Bars",
             "children": [
@@ -5485,6 +6906,15 @@
           },
           {
             "objectName": "Right"
+          },
+          {
+            "objectName": "Congratulations_Txt"
+          },
+          {
+            "objectName": "FloatingText_Correct"
+          },
+          {
+            "objectName": "FloatingText_Wrong"
           }
         ]
       },
@@ -5510,14 +6940,639 @@
                 "",
                 "\"Cloud Delay Spawn\""
               ]
+            },
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "Questions",
+                "Animation",
+                "=",
+                "QuestionIndex"
+              ]
+            },
+            {
+              "type": {
+                "value": "EnableLayerEffect"
+              },
+              "parameters": [
+                "",
+                "",
+                "\"Effect\"",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"Click Delay\""
+              ]
             }
           ]
+        },
+        {
+          "colorB": 129,
+          "colorG": 114,
+          "colorR": 84,
+          "creationTime": 0,
+          "folded": true,
+          "name": "FX",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "colorB": 33,
+              "colorG": 211,
+              "colorR": 126,
+              "creationTime": 0,
+              "name": "Correct",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "Correct_FX",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "FloatingText_Correct",
+                        "375",
+                        "Fish.Y() - 20",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "FloatingText_Correct",
+                        "Text",
+                        "=",
+                        "\"+1\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "Correct_FX",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "FloatingText_Correct",
+                        "Tween",
+                        "\"Transparent\"",
+                        "0",
+                        "\"linear\"",
+                        "0.8",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+                      },
+                      "parameters": [
+                        "FloatingText_Correct",
+                        "Tween",
+                        "\"Tweee\"",
+                        "FloatingText_Correct.Y() - 80",
+                        "\"easeOutQuad\"",
+                        "1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "0.2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "FloatingText_Correct",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "Correct_FX",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "Correct_FX",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                      },
+                      "parameters": [
+                        "Fish_Logo",
+                        "Tween",
+                        "\"Big\"",
+                        "1.2",
+                        "\"easeOutBack\"",
+                        "0.1",
+                        "",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                      },
+                      "parameters": [
+                        "Fish_Collected",
+                        "Tween",
+                        "\"Big\"",
+                        "1.2",
+                        "\"easeOutBack\"",
+                        "0.1",
+                        "",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextObject::ChangeColor"
+                      },
+                      "parameters": [
+                        "Fish_Collected",
+                        "\"126;211;33\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "0.1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                      },
+                      "parameters": [
+                        "Fish_Logo",
+                        "Tween",
+                        "\"smol\"",
+                        "1",
+                        "\"easeInOutQuad\"",
+                        "0.2",
+                        "",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                      },
+                      "parameters": [
+                        "Fish_Collected",
+                        "Tween",
+                        "\"smol\"",
+                        "1",
+                        "\"easeInOutQuad\"",
+                        "0.2",
+                        "",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextObject::ChangeColor"
+                      },
+                      "parameters": [
+                        "Fish_Collected",
+                        "\"255;255;255\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 27,
+              "colorG": 2,
+              "colorR": 208,
+              "creationTime": 0,
+              "name": "Wrong",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "Wrong__FX",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "FloatingText_Wrong",
+                        "721 - (87/2)",
+                        "Hearts.Y() - 20",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "FloatingText_Wrong",
+                        "Text",
+                        "=",
+                        "\"SALAH!\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "Wrong__FX",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "FloatingText_Wrong",
+                        "Tween",
+                        "\"Transparent\"",
+                        "0",
+                        "\"linear\"",
+                        "0.8",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+                      },
+                      "parameters": [
+                        "FloatingText_Wrong",
+                        "Tween",
+                        "\"Tweee\"",
+                        "FloatingText_Wrong.Y() - 80",
+                        "\"easeOutQuad\"",
+                        "1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "0.2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "FloatingText_Wrong",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "Wrong__FX",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "Wrong__FX",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                      },
+                      "parameters": [
+                        "HeartsLogo",
+                        "Tween",
+                        "\"Big\"",
+                        "1.2",
+                        "\"easeOutBack\"",
+                        "0.1",
+                        "",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                      },
+                      "parameters": [
+                        "Heart_Counter",
+                        "Tween",
+                        "\"Big\"",
+                        "1.2",
+                        "\"easeOutBack\"",
+                        "0.1",
+                        "",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextObject::ChangeColor"
+                      },
+                      "parameters": [
+                        "Heart_Counter",
+                        "\"208;2;27\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "0.1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                      },
+                      "parameters": [
+                        "HeartsLogo",
+                        "Tween",
+                        "\"smol\"",
+                        "1",
+                        "\"easeInOutQuad\"",
+                        "0.2",
+                        "",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                      },
+                      "parameters": [
+                        "Heart_Counter",
+                        "Tween",
+                        "\"smol\"",
+                        "1",
+                        "\"easeInOutQuad\"",
+                        "0.2",
+                        "",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextObject::ChangeColor"
+                      },
+                      "parameters": [
+                        "Heart_Counter",
+                        "\"255;255;255\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 28,
+              "colorG": 231,
+              "colorR": 248,
+              "creationTime": 0,
+              "name": "Countdown",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "TimerLeft",
+                        "<=",
+                        "10"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "mod(int(TimeFromStart()* 2), 2)",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextObject::ChangeColor"
+                      },
+                      "parameters": [
+                        "Timer_Counter",
+                        "\"208;2;27\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                      },
+                      "parameters": [
+                        "Timer_Counter",
+                        "Tween",
+                        "\"Big\"",
+                        "1.2",
+                        "\"easeOutBack\"",
+                        "0.1",
+                        "",
+                        "yes"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "TimerLeft",
+                        "<=",
+                        "10"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "mod(int(TimeFromStart()* 2), 2)",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextObject::ChangeColor"
+                      },
+                      "parameters": [
+                        "Timer_Counter",
+                        "\"255;255;255\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                      },
+                      "parameters": [
+                        "Timer_Counter",
+                        "Tween",
+                        "\"Big\"",
+                        "1",
+                        "\"easeOutBack\"",
+                        "0.2",
+                        "",
+                        "yes"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            }
+          ],
+          "parameters": []
         },
         {
           "colorB": 162,
           "colorG": 110,
           "colorR": 8,
           "creationTime": 0,
+          "folded": true,
           "name": "Cloud Spawn & Anim",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -5617,7 +7672,8 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "name": "Debugging",
+          "folded": true,
+          "name": "Main Codes",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -5633,18 +7689,187 @@
                     "ButtonFSM",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Click Delay\"",
+                    ">",
+                    "0.8"
+                  ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                    "value": "ResetTimer"
                   },
                   "parameters": [
-                    "Questions",
-                    "Animation",
-                    "=",
-                    "ToString(ToNumber(Questions.Animation::Name()) - 1)"
+                    "",
+                    "\"Click Delay\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "Directions[\"Q\" + ToString(QuestionIndex)]",
+                        "!=",
+                        "\"Left\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "HeartLeft",
+                        "-",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "Heart_Counter",
+                        "Text",
+                        "=",
+                        "HeartLeft + \"/3\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                      },
+                      "parameters": [
+                        "Hearts",
+                        "=",
+                        "HeartLeft",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "Wrong__FX",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "Directions[\"Q\" + ToString(QuestionIndex)]",
+                        "=",
+                        "\"Left\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "QuestionIndex",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Fish_Collectedd",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "Fish_Collected",
+                        "Text",
+                        "=",
+                        "Fish_Collectedd + \"/20\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                      },
+                      "parameters": [
+                        "Fish",
+                        "=",
+                        "Fish_Collectedd",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "Correct_FX",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "QuestionIndex",
+                            "<=",
+                            "TotalQuestion"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "Questions",
+                            "Animation",
+                            "=",
+                            "QuestionIndex"
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 }
               ]
@@ -5661,18 +7886,866 @@
                     "ButtonFSM",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Click Delay\"",
+                    ">",
+                    "0.8"
+                  ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                    "value": "ResetTimer"
                   },
                   "parameters": [
-                    "Questions",
-                    "Animation",
+                    "",
+                    "\"Click Delay\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "Directions[\"Q\" + ToString(QuestionIndex)]",
+                        "!=",
+                        "\"Right\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "HeartLeft",
+                        "-",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "Heart_Counter",
+                        "Text",
+                        "=",
+                        "HeartLeft + \"/3\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                      },
+                      "parameters": [
+                        "Hearts",
+                        "=",
+                        "HeartLeft",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "Wrong__FX",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "Directions[\"Q\" + ToString(QuestionIndex)]",
+                        "=",
+                        "\"Right\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "QuestionIndex",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Fish_Collectedd",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "Fish_Collected",
+                        "Text",
+                        "=",
+                        "Fish_Collectedd + \"/20\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                      },
+                      "parameters": [
+                        "Fish",
+                        "=",
+                        "Fish_Collectedd",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "Correct_FX",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "QuestionIndex",
+                            "<=",
+                            "TotalQuestion"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "Questions",
+                            "Animation",
+                            "=",
+                            "QuestionIndex"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Fish_Collectedd",
+                        "=",
+                        "20"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "0.7"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "Win",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "HeartLeft",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "0.7"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "Win",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 61,
+          "colorG": 6,
+          "colorR": 36,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Timer",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Main Timer\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "TimerLeft",
                     "=",
-                    "ToString(ToNumber(Questions.Animation::Name()) + 1)"
+                    "TotalTime - TimerElapsedTime(\"Main Timer\")"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TimerLeft",
+                    "<",
+                    "60"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Timer_Counter",
+                    "Text",
+                    "=",
+                    "\"0:\" + ToString(floor(TimerLeft))"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                  },
+                  "parameters": [
+                    "timer",
+                    "=",
+                    "(TimerLeft / TotalTime) * 100",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TimerLeft",
+                    "<",
+                    "10"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Timer_Counter",
+                    "Text",
+                    "=",
+                    "\"0:0\" + ToString(floor(TimerLeft))"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TimerLeft",
+                    "<",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "TimerLeft",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Timer_Counter",
+                    "Text",
+                    "=",
+                    "\"0:00\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "0.7"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "Win",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 47,
+          "colorG": 107,
+          "colorR": 112,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Pause",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                  },
+                  "parameters": [
+                    "Pause",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "Tween::IsPlaying"
+                  },
+                  "parameters": [
+                    "Pause_Parts",
+                    "Tween",
+                    "\"Go Up\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PauseTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Main Timer\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+                  },
+                  "parameters": [
+                    "Pause_Parts",
+                    "Tween",
+                    "\"Go Down\"",
+                    "Pause_Parts.Y() + 686.5",
+                    "\"easeOutCubic\"",
+                    "1",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Left",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Right",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EnableLayerEffect"
+                  },
+                  "parameters": [
+                    "",
+                    "",
+                    "\"Effect\"",
+                    "yes"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Tween::HasFinished"
+                      },
+                      "parameters": [
+                        "Pause_Parts",
+                        "Tween",
+                        "\"Go Down\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Left",
+                        "ButtonFSM",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Right",
+                        "ButtonFSM",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                  },
+                  "parameters": [
+                    "Resume",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "UnPauseTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Main Timer\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+                  },
+                  "parameters": [
+                    "Pause_Parts",
+                    "Tween",
+                    "\"Go Up\"",
+                    "Pause_Parts.Y() - 686.5",
+                    "\"easeInCubic\"",
+                    "1",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Left",
+                    "ButtonFSM",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Right",
+                    "ButtonFSM",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EnableLayerEffect"
+                  },
+                  "parameters": [
+                    "",
+                    "",
+                    "\"Effect\"",
+                    "no"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Tween::HasFinished"
+                      },
+                      "parameters": [
+                        "Pause_Parts",
+                        "Tween",
+                        "\"Go Up\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Left",
+                        "ButtonFSM",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Right",
+                        "ButtonFSM",
+                        "yes"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                  },
+                  "parameters": [
+                    "Restart",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "0.1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PushScene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Gameplay\""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 243,
+          "colorG": 128,
+          "colorR": 223,
+          "creationTime": 0,
+          "name": "Win",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "Win",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "RemoveTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Main Timer\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Right",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Left",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EnableLayerEffect"
+                  },
+                  "parameters": [
+                    "",
+                    "",
+                    "\"Effect\"",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                  },
+                  "parameters": [
+                    "Congratulations_Txt",
+                    "Tween",
+                    "\"Go In\"",
+                    "428",
+                    "\"easeOutQuint\"",
+                    "1.5",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "1.5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                  },
+                  "parameters": [
+                    "Congratulations_Txt",
+                    "Tween",
+                    "\"Go Out\"",
+                    "1356",
+                    "\"easeInQuint\"",
+                    "1.5",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Tween::HasFinished"
+                  },
+                  "parameters": [
+                    "Congratulations_Txt",
+                    "Tween",
+                    "\"Go Out\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+                  },
+                  "parameters": [
+                    "Win_Parts",
+                    "Tween",
+                    "\"Go Up\"",
+                    "Win_Parts.Y() - 714",
+                    "\"easeOutQuint\"",
+                    "3",
+                    ""
                   ]
                 }
               ]
@@ -5708,6 +8781,72 @@
               "width": 0
             }
           ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            },
+            {
+              "effectType": "KawaseBlur",
+              "name": "Effect",
+              "doubleParameters": {
+                "blur": 2,
+                "padding": 0,
+                "pixelizeX": 1,
+                "pixelizeY": 1,
+                "quality": 3
+              },
+              "stringParameters": {},
+              "booleanParameters": {}
+            }
+          ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "UI",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [],
           "effects": [
             {
               "effectType": "Scene3D::HemisphereLight",
@@ -13339,6 +16478,7 @@
             }
           ],
           "instances": [],
+          "editionSettings": {},
           "eventsFunctions": [
             {
               "fullName": "",
@@ -23069,6 +26209,7 @@
               "initialVariables": []
             }
           ],
+          "editionSettings": {},
           "eventsFunctions": [
             {
               "fullName": "",
@@ -25115,7 +28256,8 @@
                   "stringProperties": [],
                   "initialVariables": []
                 }
-              ]
+              ],
+              "editionSettings": {}
             },
             {
               "areaMaxX": 256,
@@ -25371,7 +28513,8 @@
                   "stringProperties": [],
                   "initialVariables": []
                 }
-              ]
+              ],
+              "editionSettings": {}
             }
           ]
         }
